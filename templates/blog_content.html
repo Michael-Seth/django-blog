@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% load static %} 
+{% block header %} {% include "header.html" %} {% endblock %} 
+{% block content %}
+
+<!-- /header -->
+<div
+  class="dh--breadcrumb--area"
+  style="background-image: url(/static/img/breadcrumb-bg.jpg)"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center" >
+        <h4 style="font-size: 48px; text-transform: capitalize; font-weight: 600">{{object.title}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="st--post--area sp">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="post--content--single">
+          <div class="post_img">
+            <img src="{{object.thumbnail.url}}" alt="" />
+          </div>
+          <div class="st--tags st--info bg-2">
+            <a href="#">{{object.category}}</a>
+          </div>
+          <h2>
+            <span>
+              {% block title %} {{object.title}} {% endblock title %}
+            </span>
+          </h2>
+          <div class="st--meta st--info">
+            <div class="st--author--info clearfix">
+              <div class="author--img pull-left">
+                <img src="{% static 'img/author.jpg' %}" alt="" />
+              </div>
+              <a href="#" class="st--author">{{ object.author }}</a>
+            </div>
+            <span class="st--post--date">{{ object.created_at }}</span>
+          </div>
+          <p style="margin-top: 50px">{{object.content | safe}}</p>
+          <span style="font-size: 12px; color: #7a7a7a; font-style: italic"
+            >Last Updated : {{object.updated_at}}
+          </span>
+
+          <div class="tag--list">
+            <div class="st--tags"><a href="#">Lifestyle</a></div>
+            <div class="st--tags c2-bg"><a href="#">Sports</a></div>
+            <div class="st--tags c3-bg"><a href="#">Music</a></div>
+            <div class="st--tags c4-bg"><a href="#">Brand</a></div>
+            <div class="st--tags c5-bg"><a href="#">Technology</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- /.st-sidebar-column -->
+    </div>
+  </div>
+</div>
+{% endblock %}

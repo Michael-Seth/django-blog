@@ -1,0 +1,47 @@
+{% load static %}
+<header class="header st--header-1">
+  <div class="logo--area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 logo--column">
+          <a href="#" class="logo"></a>
+        </div>
+        <div class="col-md-8 ads--column--1">
+          <a href="#" class="header--ads">
+            <img src="{% static 'img/ads--1.jpg' %}" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu--area header--bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 menu--column">
+          <nav class="main_menu">
+            <ul>
+              <li>
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <li><a href="{% url 'about' %}">About Us</a></li>
+              <li>
+                <a href="category-news.html">Podcast</a>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 search--column">
+          <form class="st--search--box">
+            <div>
+              <input type="search" placeholder="Enter Keyword to Search" />
+              <button type="submit">
+                <i class="zmdi zmdi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

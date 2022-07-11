@@ -1,0 +1,188 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %} {% endblock title %}</title>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <!--bootstrap-->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <!-- fontawesome -->
+    <link href='{% static "css/font-awesome.min.css" %}' rel="stylesheet" />
+    <!-- material-icon -->
+    <link
+      href='{% static "css/material-design-iconic-font.min.css" %}'
+      rel="stylesheet"
+    />
+    <!-- animate css -->
+    <link href='{% static "css/animate.css" %}' rel="stylesheet" />
+    <!-- owl.carousel -->
+    <link rel="stylesheet" href='{% static "css/owl.carousel.css" %}' />
+    <!-- sweet.alert.css -->
+    <link rel="stylesheet" href='{% static "css/sweet.alert.css" %}' />
+    <!-- slicknav.css -->
+    <link rel="stylesheet" href='{% static "css/slicknav.min.css" %}' />
+    <!-- mfg.css -->
+    <link rel="stylesheet" href='{% static "css/magnific.pupup.css" %}' />
+
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <!-- <link rel="stylesheet" href="rs-plugin/css/settings.css"> -->
+
+    <!-- fonts -->
+    <link
+      href='{% static "https://fonts.googleapis.com/css?family=Merriweather:300,400,700%7CNoto+Sans:400,700" %}'
+      rel="stylesheet"
+    />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src='{% static "js/jquery.min.js" %}'></script>
+    <!-- jQuery -->
+  </head>
+
+  <body class="home loading">
+    <!-- preloader -->
+    <div
+      class="preloader"
+      aria-busy="true"
+      aria-label="Loading, please wait."
+      role="progressbar"
+    ></div>
+    <div class="preloader--main">
+      <div class="st--inner">
+        <span class="preloader-spin"></span>
+      </div>
+    </div>
+    <div
+      class="preloader btm"
+      aria-busy="true"
+      aria-label="Loading, please wait."
+      role="progressbar"
+    ></div>
+
+    <div class="site_wrap">
+      {% block header %} {% endblock %}
+      <!-- /header -->
+
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
+
+      <!-- /.st-cta-1 -->
+      <div class="st--cta--1 st--sp--65 st--dark--bg--1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 cta--height--1 flex_center">
+              <div class="st--cta--inner">
+                <h3>Subscribe to our newslater</h3>
+                <span
+                  >Get the best viral stories straight into your inbox! Don’t
+                  Worry we don’t Spam..</span
+                >
+              </div>
+            </div>
+            <div class="col-md-5 cta--height--1 flex_center">
+              <div class="st--cta--inner">
+                <div class="st--newsletter--1">
+                  <form action="#">
+                    <div class="st--inner">
+                      <input
+                        type="email"
+                        placeholder="Enter your email here"
+                        required=""
+                      />
+                      <button type="submit">subscribe</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.st-cta-1 -->
+
+      <footer class="footer st--footer--1">
+        <div class="st--footer--top st--sp--65 st--dark--bg--2">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="widget st--footer--widget">
+                  <a href="#" class="logo">
+                    <!--<img src='"img/logo--white.png" alt="" />-->
+                  </a>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Eum corporis magni atque rem beatae itaque commodi
+                  </p>
+                  <div class="st--footer--social">
+                    <a href="#" class="zmdi zmdi-facebook"></a>
+                    <a href="#" class="zmdi zmdi-twitter"></a>
+                    <a href="#" class="zmdi zmdi-linkedin"></a>
+                    <a href="#" class="zmdi zmdi-instagram"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="st--footer--btm st--dark--bg--3">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <span
+                  >© Copyright 2022. All rights reserved | Michael Osas</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer -->
+      <!-- Vendors (All Essential JavaScript plugins) -->
+
+      <!-- bootstrap -->
+      <script
+        type="text/javascript"
+        src='{% static "js/vendor/bootstrap.min.js" %}'
+      ></script>
+      <!-- magnific -->
+      <script
+        type="text/javascript"
+        src='{% static "js/vendor/magnific.popup.min.js" %}'
+      ></script>
+      <!-- slick -->
+      <script
+        type="text/javascript"
+        src='{% static "js/vendor/slick.min.js" %}'
+      ></script>
+
+      <!-- Owl Carousel -->
+      <script src='{% static "js/vendor/owl.carousel.min.js" %}'></script>
+
+      <!-- slicknav -->
+      <script
+        type="text/javascript"
+        src='{% static "js/vendor/slicknav.min.js" %}'
+      ></script>
+      <!-- masonry -->
+      <script
+        type="text/javascript"
+        src='{% static "js/vendor/masonry.pkgd.min.js" %}'
+      ></script>
+      <!-- web ticker -->
+      <script
+        type="text/javascript"
+        src='{% static "js/vendor/web.ticker.min.js" %}'
+      ></script>
+      <!-- active -->
+      <script type="text/javascript" src='{% static "js/active.js" %}'></script>
+    </div>
+    <!-- end .site_wrap -->
+  </body>
+</html>

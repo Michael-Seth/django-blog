@@ -37,8 +37,86 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'custom',
+        'toolbar_custom': [
+            ['Find', 'Replace'], ['Bold', 'Italic'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-',
+             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['Image', 'Smiley', 'Iframe'],
+            ['RemoveFormat', 'Source']],
+        'extra_plugins': ['codesnippet'],
+    }
+}
+
+# # Configure CKEditor
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'skin': 'icy_orange',
+#         'toolbar': 'Habib',
+#         'toolbar_Habib': [
+#             {'name': 'basicstyles',
+#              'items': ['Bold', 'Italic', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+#             {'name': 'paragraph',
+#              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+#                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']},
+#             {'name': 'editing', 'items': [
+#                 'Find', 'Replace']},
+#             # {'name': 'yourcustomtools', 'items': ['Preview', 'Maximize']},
+#             '/',  # End of first line of CKEditor
+#             {'name': 'styles', 'items': [
+#                 'Styles', 'Format', 'Font', 'FontSize']},
+#             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+#             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+#             {'name': 'insert',
+#              'items': ['Image', 'Flash', 'Smiley', 'SpecialChar', 'Iframe']},
+#             '/',  # End of second line of CKEditor
+#             {'name': 'mydev', 'items': [
+#                 'Youtube', 'CodeSnippet', 'ExportPdf', 'Uploadfile']},
+#             # put this to force next toolbar on new line
+
+#         ],
+#         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+#         # 'height': 291,
+#         # 'width': '100%',
+#         # 'filebrowserWindowHeight': 725,
+#         # 'filebrowserWindowWidth': 940,
+#         # 'toolbarCanCollapse': True,
+#         # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+#         'fontSize_defaultLabel': 44,
+#         'tabSpaces': 4,
+#         'extraPlugins': ','.join([
+#             'uploadimage',  # the upload image feature
+#             # your extra plugins here
+#             'div',
+#             'autolink',
+#             'autoembed',
+#             'embedsemantic',
+#             'autogrow',
+#             # 'devtools',
+#             'widget',
+#             'lineutils',
+#             'clipboard',
+#             'dialog',
+#             'dialogui',
+#             'elementspath',
+#             'link', ' iframe', 'colorbutton', 'youtube',
+#             'codesnippet',
+#             'exportpdf',
+#             'uploadfile',
+
+#         ]),
+#     }
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
